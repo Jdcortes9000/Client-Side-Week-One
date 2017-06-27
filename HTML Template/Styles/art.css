@@ -1,1 +1,46 @@
+div {
+    background-color:green !important;
+    height: 10%;
+    width: 1em;
+    border: 1px solid black;
+}
+#id{
+    background-color:burlywood;
+}
+.class{
+    background-color:greenyellow;
+}
 
+div.note{
+    background-color:red;
+}
+
+/*descendant*/
+
+div p{
+    background-color:green;
+}
+/*Child Elements*/
+
+div > p {
+    background-color: plum;
+}
+
+/*pseudo selector*/
+
+table:hover{
+    background-color:palevioletred;
+}
+table:active{
+
+}
+table:focus{
+
+}
+
+/*attribute
+element[attr = 'value']
+*/
+div[class = 'note'] {
+    color:yellow;
+}

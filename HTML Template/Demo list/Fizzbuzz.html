@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>FizzBuzz</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li id="1">1</li>
+            <li id="2">2</li>
+            <li id="3">3</li>
+            <li id="4">4</li>
+            <li id="5">5</li>
+            <li id="6">6</li>
+            <li id="7">7</li>
+            <li id="8">8</li>
+            <li id="9">9</li>
+            <li id="10">10</li>
+        </ul>
+    </div>
+    <script>
+        for (var i = 1; i < 11; i++)
+        {
+            if (document.getElementById(i).innerHTML % 3 == 0) {               
+                document.getElementById(i).innerHTML = "Fizz";
+                document.getElementById(i).style.color = "Red";
+                document.getElementById(i).style.border = "1px solid black";
+     
+            }
+            else if (document.getElementById(i).innerHTML % 5 == 0) {
+                document.getElementById(i).innerHTML = "Buzz";
+                document.getElementById(i).style.color = "Blue";
+                document.getElementById(i).style.border = "1px solid yellow";
+            }
+            else if (document.getElementById(i).innerHTML % 3 == 0 && document.getElementById("1").innerHTML % 5 == 0) {
+                document.getElementById(i).innerHTML = "FizzBuzz";
+            }
+        }
+       
+    </script>
+</body>
+</html>
