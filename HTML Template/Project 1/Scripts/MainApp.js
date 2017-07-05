@@ -41,7 +41,7 @@ window.onload = function () {
                 tdAmount.appendChild(document.createTextNode(theCart.items[i].amount));
                 tr.appendChild(tdAmount);
                 var tdPrice = document.createElement("td");
-                tdPrice.appendChild(document.createTextNode(theCart.items[i].price));
+                tdPrice.appendChild(document.createTextNode(theCart.items[i].price.toFixed(2)));
                 
                 //var addButton = document.createElement("button");
                 //addButton.innerText = "Add";
@@ -72,7 +72,7 @@ window.onload = function () {
                 
             }
             var total = document.getElementById("Total");
-            total.innerText = "Total: " + CartStuff.GetTotal();
+            total.innerText = "Total: " + CartStuff.GetTotal().toFixed(2);
         }
         displayFunc = DisplayCart;
     })(window.Cart);
