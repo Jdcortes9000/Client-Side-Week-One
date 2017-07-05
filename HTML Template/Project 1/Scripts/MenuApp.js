@@ -30,15 +30,15 @@ window.Menu = (function () {
         var item = new menuItem(itemName, price);
         return item;
     }
-    function GetMenu()
+    function GetMenu(callback)
     {
-        return Categories;
+        callback(Categories);
     }
     return {
         GetMenu: GetMenu,
         AddCategory: AddCategory,
         CreateCategory: CreateCategory,
         AddFoodItem: AddFoodItem,
-        CreateFoodItem, CreateFoodItem
+        CreateFoodItem: CreateFoodItem
     }
 })();

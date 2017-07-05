@@ -13,8 +13,19 @@
         #shoppingCart{
             float:right;
            border: 3px solid black;
-           width:150px;                   
+           width:600px;                   
         }
+        #Address{
+            border-bottom:1px solid black;
+            padding-bottom:5%;  
+        }
+        #Total{
+            border-top:1px solid black;
+            padding-top:5%;  
+            text-align:right;
+            font-size: 175%;
+        }
+        
         .cartTitle{
             text-align:center;
             font-size:200%;
@@ -26,6 +37,9 @@
             text-align:center;
             font-size:750%;
         }
+        button{
+           margin-left: 5%;
+        }
        .menuCategory{
             text-align:center;
             font-size:250%;
@@ -33,17 +47,32 @@
             border-top: 1px solid black;  
             padding-bottom:5%;     
         }
-       table, tr, td{
+      #menuBody table, #menuBody tr,#menuBody td{
             position:center;            
              font-size: 115%;
         }
-        table{         
+       #menuBody table{         
             border-collapse: collapse;
             width: 100%;
         }
-        td {
+       #menuBody td {
     padding: 15px;
     text-align:center;
+}
+
+       table, tr, th{
+            position:center;            
+             font-size: 115%;
+        }
+       table{         
+            border-collapse: collapse;
+            width: 100%;
+        }
+      td {
+    padding-bottom: 5%;
+    padding-right:5%;
+    padding-top: 5%;
+    text-align:left;
 }
         
     </style>
@@ -99,9 +128,31 @@
     </div>
     <div id="shoppingCart">
         <h2 class="cartTitle">CART</h2>
-        <p>Name: Josue Cortes</p>
-        <p>Adress: 70 Urayoan Street, Manati PR 00674</p>
-        
+        <p id="UserName"></p>
+        <p id="Address"></p>
+        <table id="cartList">
+            <tr>
+                <th>Item</th>
+                <th>Amount</th>
+                <th>Price</th>
+            </tr>
+            <!--<tr>
+                <td>Salad</td>
+                <td>1</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <td>Salad</td>
+                <td>1</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <td>Salad</td>
+                <td>1</td>
+                <td>5.00</td>
+            </tr>-->
+        </table>
+        <p id="Total">Total: 0.00 </p>
     </div>
     
     <script type="text/javascript" src="Scripts/MainApp.js"></script>
