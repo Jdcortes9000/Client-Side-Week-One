@@ -1,10 +1,12 @@
 window.Cart = (function () {
+    //Constructor for the cartItem that displays the name, amount and price
     function cartItem(Itemname, amount, price)
     {
         this.name = Itemname;
         this.amount = amount;
         this.price = price;
     }
+    //Constructor for the actual cart that has all purchased items and the users info
     function shoppingCart(userName, address, items)
     {
         this.name = userName;
