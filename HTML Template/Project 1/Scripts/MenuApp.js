@@ -35,7 +35,20 @@ window.Menu = (function () {
     }
     function GetMenu(callback)
     {
-        callback(Categories);
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'http://localhost/MenuApi/api/Menu/GetMenu', true);
+        xhr.responseType = 'json';
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                callback(xhr.response);
+            }
+            else {
+                console.log("Error connecting");
+                console.log(xhr.status);
+            }
+        };
+        
+        xhr.send();
     }
     return {
         GetMenu: GetMenu,
